@@ -4,7 +4,8 @@ tags: 设计模式
 categories: 程序员基础知识
 ---
 
-{% mermaid %}
+
+```mermaid
 
 classDiagram
 	class ClassA{
@@ -15,9 +16,8 @@ classDiagram
 	+String someField$
 	}
 
-{% endmermaid %}
 
-
+```
 
 > 
 

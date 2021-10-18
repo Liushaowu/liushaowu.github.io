@@ -22,7 +22,8 @@ categories: 程序员基础知识
 
 # Duck 类图
 
-{% mermaid %}
+
+```mermaid
 classDiagram
 	FlyBehavior <|.. FlyNoWay
 	FlyBehavior <|.. FlyRocketPowered
@@ -76,7 +77,8 @@ classDiagram
 	class ModelDuck{
 		+display()
 	}
-{% endmermaid %}
+
+```
 
 
 
