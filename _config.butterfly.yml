@@ -27,7 +27,10 @@ code_word_wrap: false
 highlight_height_limit: false # unit: px
 
 
-# 图标
+
+# social settings (社交圖標設置)
+# formal:
+#   icon: link || the description
 #social:
 #  fab fa-github: https://github.com/xxxxx || Github
 #  fas fa-envelope: mailto:xxxxxx@gmail.com || Email
@@ -57,21 +60,40 @@ cover:
   position: both
   # 當沒有設置cover時，默認的封面顯示
   default_cover: 
+# Replace Broken Images (替換無法顯示的圖片)
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
 
-
-ost_meta:
-  page:
-    date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
-    date_format: relative # date/relative 顯示日期還是相對日期
+post_meta:
+  page: # Home Page
+    date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
+    date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 主頁是否顯示分類
-    tags: true # true or false 主頁是否顯示標籤
+    tags: false # true or false 主頁是否顯示標籤
     label: true # true or false 顯示描述性文字
   post:
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
-    date_format: relative # date/relative 顯示日期還是相對日期
+    date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 文章頁是否顯示分類
     tags: true # true or false 文章頁是否顯示標籤
     label: true # true or false 顯示描述性文字
+
+# wordcount (字數統計)
+wordcount:
+  enable: false
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# Display the article introduction on homepage
+# 1: description
+# 2: both (if the description exists, it will show description, or show the auto_excerpt)
+# 3: auto_excerpt (default)
+# false: do not show the article introduction
+index_post_content:
+  method: 3
+  length: 500 # if you set method to 2 or 3, the length need to config
 
 # 文章版權和許可協議
 post_copyright:
@@ -96,9 +118,20 @@ reward:
       text: 支付宝
 
 toc:
-  enable: true
+  post: true
+  page: false
   number: true
-  style_simple: true
+  expand: falseW
+  style_simple: false # for post
+  
+# Post edit
+# Easily browse and edit blog source code online.
+post_edit:
+  enable: false
+  # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
+  # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
+  url:
+  
 # 相关文章
 related_post:
   enable: true
@@ -209,10 +242,10 @@ runtimeshow:
   #也可以寫成 年/月/日 時間
 
 newest_comments:
-  enable: true
+  enable: false
   sort_order: # Don't modify the setting unless you know how it works
-    limit: 6
-    storage: 10 # unit: mins, save data to localStorage
+  limit: 6
+  storage: 10 # unit: mins, save data to localStorage
   avatar: true
 
 canvas_nest:
